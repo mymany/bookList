@@ -1,0 +1,12 @@
+version: "3"
+services: 
+  staging:
+    build: 
+      context: ./
+      dockerfile: Dockerfile.staging
+    command: yarn start
+    ports:
+      - 80:80
+      - 3000:3000
+    container_name: "hiq_front_staging"
+    tty: true

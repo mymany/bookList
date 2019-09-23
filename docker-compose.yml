@@ -1,0 +1,20 @@
+version: "3"
+services: 
+  app:
+    build: 
+      context: ./
+    privileged: true
+    volumes:
+      - "./:/usr/share/nginx/html"
+      - "./node_modules:/usr/share/nginx/html/node_modules"
+    ports:
+      - 3004:3000
+      - 6006:6006
+      - 9229:9229
+    container_name: "hiq_front_develop"
+    tty: true
+    networks:
+      - docker_default
+networks:
+    docker_default:
+        external: true
