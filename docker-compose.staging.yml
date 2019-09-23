@@ -8,5 +8,5 @@ services:
     ports:
       - 80:80
       - 3000:3000
-    container_name: "hiq_front_staging"
+    container_name: "bookList_front_staging"
     tty: true
