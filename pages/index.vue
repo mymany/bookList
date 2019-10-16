@@ -42,20 +42,13 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import Card from '~/components/Card.vue'
 
 @Component({
   components: {
-    Card: () => import('~/components/Card.vue')
+    Card
   }
 });
 
-// export default {
-  // name: 'HomePage',
-
-  // components: {
-  //   Card
-  // }
-
-// }
 export default class Index extends Vue {}
 </script>

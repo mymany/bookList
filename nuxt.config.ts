@@ -1,7 +1,7 @@
-import NuxtConfiguration from '@nuxt/config'
+import {Configuration} from '@nuxt/types'
 
 // export default {
-const nuxtConfig: NuxtConfiguration = {
+const nuxtConfig: Configuration = {
   mode: 'spa',
   /*
   ** Headers of the page
@@ -17,41 +17,19 @@ const nuxtConfig: NuxtConfiguration = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
   loading: { color: '#fff' },
-  /*
-  ** Global CSS
-  */
   css: [
   ],
-  /*
-  ** Plugins to load before mounting the App
-  */
   plugins: [
   ],
-  /*
-  ** Nuxt.js dev-modules
-  */
   buildModules: [
   ],
-  /*
-  ** Nuxt.js modules
-  */
   modules: [
-    // Doc: https://buefy.github.io/#/documentation
     'nuxt-buefy',
   ],
-  /*
-  ** Build configuration
-  */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend (config, ctx) {
-    }
+    // extend (config, ctx) {
+    // }
   }
 }
 

@@ -9,8 +9,6 @@ services:
       - "./node_modules:/usr/share/nginx/html/node_modules"
     ports:
       - 3033:3000
-      # - 6006:6006
-      # - 9229:9229
     container_name: "bookList_front_develop"
     tty: true
     networks:
