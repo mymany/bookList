@@ -29,7 +29,6 @@
           Bulma
         </a>
       </card>
-
       <card
         title="Lightweight"
         icon="arrange-bring-to-front"
@@ -40,15 +39,13 @@
   </section>
 </template>
 
-<script lang="ts">
+<script>
 import { Component, Vue } from 'vue-property-decorator'
-import Card from '~/components/Card.vue'
-
-@Component({
+import Card from '~/components/Card'
+export default {
   components: {
     Card
   }
-});
+}
 
-export default class Index extends Vue {}
 </script>
