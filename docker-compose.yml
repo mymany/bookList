@@ -13,6 +13,13 @@ services:
     tty: true
     networks:
       - docker_default
+  mock:
+    image: stoplight/prism:3.1.1
+    volumes:
+      - ./swagger/swagger.yml:/swagger.yml
+    ports:
+      - 38080:4010
+    command: 'mock -h 0.0.0.0 /swagger.yml'
 networks:
     docker_default:
         external: true
