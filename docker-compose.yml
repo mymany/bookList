@@ -8,18 +8,20 @@ services:
       - "./:/usr/share/nginx/html"
       - "./node_modules:/usr/share/nginx/html/node_modules"
     ports:
-      - 3033:3000
+      # - 3033:3000
+      - 30080:30080
     container_name: "bookList_front_develop"
-    tty: true
-    networks:
-      - docker_default
+    # tty: true
+    # networks:
+    #   - docker_default
   mock:
     image: stoplight/prism:3.1.1
     volumes:
+      - ./swagger/reference/booklist/models:/models
       - ./swagger/swagger.yml:/swagger.yml
     ports:
       - 38080:4010
     command: 'mock -h 0.0.0.0 /swagger.yml'
-networks:
-    docker_default:
-        external: true
+# networks:
+#     docker_default:
+#         external: true

@@ -1,0 +1,12 @@
+title: note
+type: object
+properties:
+  id:
+    type: integer
+    example: '1'
+  title:
+    type: string
+    example: title
+  note:
+    type: string
+    example: note

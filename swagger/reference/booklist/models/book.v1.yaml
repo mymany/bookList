@@ -1,0 +1,15 @@
+title: book
+type: object
+properties:
+  id:
+    type: integer
+    example: '1'
+  author:
+    type: string
+    example: author
+  title:
+    type: string
+    example: title
+  isbn:
+    type: string
+    example: isbn

@@ -5,7 +5,8 @@
   "author": "",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "cross-env NUXT_HOST=0.0.0.0 NUXT_PORT=30080 NODE_ENV=development BASE_URL=http://mock:4010 BROWSER_BASE_URL=http://localhost:30080/api nuxt",
+    "dev-plain": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -14,6 +15,8 @@
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.7.1",
+    "cross-env": "^6.0.3",
     "nuxt": "^2.0.0",
     "nuxt-buefy": "^0.3.2",
     "pug": "^2.0.4",

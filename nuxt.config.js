@@ -40,10 +40,21 @@ export default {
   modules: [
     // Doc: https://buefy.github.io/#/documentation
     'nuxt-buefy',
+    '@nuxtjs/axios'
   ],
-  /*
-  ** Build configuration
-  */
+  axios: {
+    proxy: process.env.NODE_ENV === "development",
+    baseURL: process.env.BASE_URL || process.env.BROWSER_BASE_URL,
+    browserBaseURL: process.env.BROWSER_BASE_URL
+  },
+  proxy: {
+    '/api': {
+      target: process.env.BASE_URL,
+      pathRewrite: {
+        '^/api': '/'
+      }
+    }
+  },
   build: {
     /*
     ** You can extend webpack config here
